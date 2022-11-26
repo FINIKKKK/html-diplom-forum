@@ -26,6 +26,11 @@ a {
   color: $white;
   transition: 0.2s;
 }
+svg {
+  fill: $white;
+  transition: 0.2s;
+  height: auto;
+}
 
 // ---- Global-Classes ----
 .container {
@@ -57,6 +62,7 @@ a {
 
 .tagList {
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
   .tag {
     font-weight: 700;
@@ -64,10 +70,13 @@ a {
     line-height: 12px;
     font-weight: 700;
     background-color: $main;
-    color: $bg;
-    padding: 5px;
+    padding: 4px 5px;
     white-space: nowrap;
     border-radius: 3px;
+    text-transform: uppercase;
+    a {
+      color: $bg;
+    }
   }
   .tag:not(:last-child) {
     margin-right: 12px;
@@ -79,6 +88,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
   input {
     width: 100%;
     font-family: $font;
