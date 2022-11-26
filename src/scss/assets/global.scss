@@ -49,6 +49,55 @@ a {
   }
 }
 
+.block {
+  background-color: $purple;
+  box-shadow: 0px 4px 8px #2e2443;
+  border-radius: 38px;
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  .tag {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 700;
+    background-color: $main;
+    color: $bg;
+    padding: 5px;
+    white-space: nowrap;
+    border-radius: 3px;
+  }
+  .tag:not(:last-child) {
+    margin-right: 12px;
+  }
+}
+
+.input {
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  input {
+    width: 100%;
+    font-family: $font;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    color: $white;
+    &::placeholder {
+      color: $white;
+    }
+  }
+  svg {
+    fill: $white;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+  }
+}
+
 // ScrollBar
 ::-webkit-scrollbar {
   width: 5px;
@@ -58,10 +107,10 @@ a {
   border-radius: 3px;
 }
 ::-webkit-scrollbar-track {
-  background-color: transparent;
+  background-color: $bg;
 }
 
 // Selection
 ::selection {
-  background: rgba($purple, 0.6) !important;
+  background: rgba($bg, 0.35) !important;
 }
