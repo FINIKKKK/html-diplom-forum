@@ -1,0 +1,66 @@
+// ---- Global-Tags ----
+html {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  &.fixed {
+    overflow-y: hidden;
+  }
+}
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+body {
+  position: relative;
+  overflow-x: hidden;
+  min-width: 320px;
+  font-family: $font;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: $white;
+  background: $bg-gradient;
+}
+a {
+  color: $white;
+}
+
+// ---- Global-Classes ----
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1170px;
+}
+
+.btn {
+  padding: 5px 27px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  color: $bg;
+  background: $main;
+  border-radius: 40px;
+  transition: 0.2s;
+  &:hover {
+    background: $bg;
+    color: $main;
+  }
+}
+
+// ScrollBar
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: $main;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+// Selection
+::selection {
+  background: rgba($purple, 0.6) !important;
+}
