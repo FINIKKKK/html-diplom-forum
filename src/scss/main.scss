@@ -183,6 +183,12 @@
   .content {
     width: 75%;
   }
+  .rightSide {
+    width: 75%;
+    position: relative;
+    padding: 35px 45px;
+    background-color: $purple2;
+  }
   .questions {
     .question:not(:last-child) {
       margin-bottom: 55px;
@@ -496,9 +502,6 @@
 
 // --------- ques ----------
 .ques {
-  position: relative;
-  padding: 35px 45px;
-  background-color: $purple2;
   .options {
     position: absolute;
     right: 45px;
@@ -666,7 +669,7 @@
   }
   .answer__footer {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 30px;
     .btn {
       padding: 5px 25px;
@@ -674,9 +677,24 @@
       line-height: 14px;
       margin-right: 15px;
     }
-    .item {
+    .comments__btn {
       color: $gray;
       font-weight: 700;
+    }
+  }
+  .comments__box {
+    margin-top: 3px;
+    .comments {
+      margin-top: 15px;
+    }
+    .comment {
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+      b {
+        color: $main;
+        font-weight: 700;
+      }
     }
   }
 }
@@ -805,5 +823,77 @@
     .item:not(:last-child) {
       margin-right: 25px;
     }
+  }
+}
+
+// --------- edit ----------
+.edit {
+  background-color: $purple2;
+  .inputBlock {
+    background-color: $purple;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 50px;
+  }
+  .input__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    input {
+      color: $white;
+      &::placeholder {
+        color: $white;
+      }
+    }
+  }
+  .input__text {
+    position: relative;
+    textarea {
+      color: $white;
+      font-family: $font;
+      font-size: 14px;
+      line-height: 18px;
+      width: 100%;
+      min-height: 270px;
+    }
+  }
+  .buttons {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    .item:not(:last-child) {
+      margin-right: 30px;
+    }
+    .item {
+      cursor: pointer;
+      width: 20px;
+    }
+    .item:nth-child(1) {
+      width: 15px;
+    }
+    .item:nth-child(2) {
+      width: 15px;
+    }
+  }
+  .input__tags {
+    display: flex;
+    align-items: center;
+    input {
+      margin-left: 15px;
+      font-size: 14px;
+      line-height: 18px;
+      width: 70%;
+      color: $white;
+    }
+  }
+  .add {
+    margin-left: 15px;
+    color: $white;
+    font-size: 18px;
+  }
+  .submit {
+    padding: 10px 50px;
+    font-size: 16px;
+    line-height: 22px;
   }
 }
