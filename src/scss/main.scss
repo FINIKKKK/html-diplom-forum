@@ -1,14 +1,14 @@
 // --------- footer ----------
 .footer {
   .copy {
-    background: $main;
+    background: $purple2;
     width: 100%;
     padding: 15px 15px;
     font-size: 14px;
     line-height: 14px;
     font-weight: 700;
     text-align: center;
-    color: $bg;
+    color: $white;
   }
 }
 
@@ -154,6 +154,9 @@
     right: 135px;
     transition: 0.2s;
     width: 18px;
+    path {
+      transition: 0.2s;
+    }
     path:nth-child(1) {
       fill: transparent;
     }
@@ -223,6 +226,7 @@
     align-items: center;
     padding: 8px;
     border-radius: 5px;
+    cursor: pointer;
     p {
       font-size: 16px;
       line-height: 18px;
@@ -234,7 +238,7 @@
       fill: $white;
     }
   }
-  .answers {
+  .chooseAnswers {
     display: flex;
     align-items: center;
     .item:not(:last-child) {
@@ -244,6 +248,7 @@
       display: flex;
       align-items: center;
       cursor: pointer;
+      transition: 0.2s;
       p {
         font-size: 16px;
         margin-right: 13px;
@@ -258,6 +263,7 @@
     }
     .item.active {
       color: $main;
+      pointer-events: none;
       svg {
         fill: $main;
       }
@@ -283,9 +289,9 @@
     line-height: 23px;
     color: $gray;
     &:hover {
-      color: #000;
+      color: $white;
       svg {
-        fill: #000;
+        fill: $white;
       }
     }
     svg {
@@ -309,13 +315,24 @@
       pointer-events: none;
     }
   }
-  .input {
-    max-width: 55px;
+  .pagination__input {
+    max-width: 65px;
     margin-right: 15px;
+    position: relative;
     input {
+      color: $white;
+      width: 100%;
+      border-radius: 25px;
       text-align: center;
       padding: 5px;
       border: 1px solid $main;
+      font-weight: 700;
+      font-size: 14px;
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
     }
   }
 }
@@ -402,6 +419,9 @@
       width: 24px;
       fill: $gray;
       margin-bottom: 14px;
+      &:hover {
+        fill: $white;
+      }
     }
     .title {
       font-weight: 700;
@@ -417,6 +437,13 @@
         &:not(:last-child) {
           margin-right: 18px;
         }
+        &:hover {
+          background-color: $purple;
+          svg {
+            fill: $white;
+          }
+        }
+        transition: 0.2s;
         width: 29px;
         height: 29px;
         border-radius: 7px;
@@ -442,11 +469,20 @@
       padding: 10px 15px;
       border-radius: 10px;
       transition: 0.3s;
+      &:hover {
+        label {
+          color: $white;
+        }
+        svg {
+          fill: $white;
+        }
+      }
       &.focus {
         background-color: $purple;
         label {
           font-size: 12px;
           top: 10px;
+          color: $white;
         }
         svg {
           fill: $white;
@@ -496,6 +532,7 @@
       a {
         color: $main;
       }
+
     }
   }
 }
@@ -519,6 +556,7 @@
     width: 35px;
     height: 35px;
     margin-right: 17px;
+    transition: 0.2s;
     img {
       width: 100%;
       height: 100%;
@@ -528,6 +566,10 @@
   .name {
     font-weight: 700;
     margin-bottom: 3px;
+    transition: 0.2s;
+    &:hover {
+      color: $main;
+    }
   }
   .date {
     font-weight: 700;
@@ -635,6 +677,9 @@
       cursor: pointer;
       fill: $white;
       width: 18px;
+      &:hover {
+        fill: $main;
+      }
     }
   }
   .answer__title {
